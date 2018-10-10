@@ -26,7 +26,7 @@ class Footer extends Component {
               <h4 className="display-4 mb-5 mt-5">Connect with me on these platforms</h4>
             </div>
         </div>
-        <div className="row justify-content-center">
+        <div className="row justify-content-center text-center">
             <div className="col-lg-2 col-4">
               <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" className="btn border-0 icon icon-shape bg-white rounded-circle">
                   <FontAwesomeIcon className="text-dark" icon="envelope-open"/>

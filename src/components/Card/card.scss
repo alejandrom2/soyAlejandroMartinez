@@ -1,0 +1,36 @@
+@import "bootstrap/scss/mixins/_transition.scss";
+@import "bootstrap/scss/_functions.scss";
+@import "argon-design-system-free/assets/scss/custom/_variables.scss";
+
+@each $color, $value in $theme-colors {
+    $rgbaColor: rgba($value, .7);
+    $gradientColor: linear-gradient(87deg, $rgbaColor 0, adjust-hue($rgbaColor, 25%) 100%);
+        .card-lift--hover-#{$color} {
+            height:400px;
+        .description{
+            overflow:auto;
+        }
+        .icon{
+            position: absolute;
+            bottom: 0px;
+        }
+        .text-under{
+            background-image: $gradientColor;
+            background-repeat: no-repeat;
+            background-size: 100% 0.25em;
+            background-position: 0 90%;
+            transition: background-size 0.2s ease-in-out;
+        }
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07), 0 9px 8px $rgbaColor !important;
+            border-radius: 32px;
+            .text-under{
+                background-size: 100% 100%;
+                transition: .2s ease-in-out;
+            }
+            @include transition($transition-base);
+
+        }
+    }
+}

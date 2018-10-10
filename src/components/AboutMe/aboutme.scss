@@ -1,0 +1,28 @@
+#name{
+    font-weight:bold;
+    text-transform: uppercase;
+}
+.emoji{
+    font-size:4rem;
+    &-slant{
+      font-size:4rem;
+      transform: rotate(-30deg);
+  }
+}
+.section-wrapper {
+  margin-top: -3%;
+  padding: 5% 20px;
+  
+  -webkit-transform: skewY(-2deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+  -o-transform: skewY(-3deg);
+  transform: skewY(-3deg);
+}
+.inner-wrapper {
+  -webkit-transform: skewY(3deg);
+  -moz-transform: skewY(3deg);
+  -ms-transform: skewY(3deg);
+  -o-transform: skewY(3deg);
+  transform: skewY(3deg);
+}

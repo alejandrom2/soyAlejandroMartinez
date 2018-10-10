@@ -72,6 +72,9 @@ h2.hero-text{
     @include media-breakpoint-up(sm) {
         width: 10rem;
     }
+    @media (max-height: 850px){
+        display:none;
+    }
     // @include media-breakpoint-up(md) {
     //     width: 15rem;
     // }

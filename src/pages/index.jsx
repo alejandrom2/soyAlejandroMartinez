@@ -13,13 +13,12 @@ class Index extends React.Component {
     return (
       <Layout location={this.props.location} title="Home">
         <div>
-          <Helmet>
-          </Helmet>
-          <Hero/>
-          <AboutMe/>
-          <Projects/>
-          <Resume/>
-          <Footer/>
+          <Helmet />
+          <Hero />
+          <AboutMe />
+          <Projects />
+          <Resume />
+          <Footer />
         </div>
       </Layout>
     );

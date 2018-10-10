@@ -1282,10 +1282,10 @@ are-we-there-yet@~1.1.2:
     delegates "^1.0.0"
     readable-stream "^2.0.6"
 
-argon-design-system-free@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/argon-design-system-free/-/argon-design-system-free-1.0.1.tgz#4c59265a866ee4ba039dbad3c55991df0e30f54c"
-  integrity sha512-DOkhwjdbXirzGPv56ot4YW0L/3I2kX4nU8BOCXBJXay4LClo6jA0pWaHQxWoTOOmCamoBYhIlDtpsjPTbWlcrQ==
+argon-m2@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/argon-m2/-/argon-m2-1.0.2.tgz#b918c4eadf16805bf489010e0b3a4c990a3a0456"
+  integrity sha512-rHuwoJ5Hi04PJkAIkly5w2pX44ECwX5KaWls/1j/yjeZw4uJenPeHV0sWJOuKm3n2VSu6qdapyEKcaWYB2Zd5Q==
   dependencies:
     del "^3.0.0"
     gulp-cache "^1.0.2"

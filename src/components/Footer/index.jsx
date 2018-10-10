@@ -51,9 +51,6 @@ class Footer extends Component {
               <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" className="btn border-0 icon icon-shape bg-info rounded-circle">
                   <FontAwesomeIcon className="text-primary" icon={['fab', 'twitter']}/>
               </a>
-              <button type="button" className="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="This is a very beautiful popover, show some love.">
-                Popover on left
-              </button>
             </div>
         </div>
         <hr/>

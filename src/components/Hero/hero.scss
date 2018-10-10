@@ -18,6 +18,9 @@ h1.hero-text{
     }
     @include media-breakpoint-up(md) {
         font-size: 5rem;
+        @media (max-height: 850px){
+            font-size:4rem;
+        }
     }
     // @include media-breakpoint-up(lg) {
     //     font-size: 6.5rem;
@@ -35,7 +38,10 @@ h2.hero-text{
         font-size: 3.5rem;
     }
     @include media-breakpoint-up(lg) {
-        font-size: 4rem;
+        font-size: 5rem;
+        @media (max-height: 850px){
+            font-size:4rem;
+        }
     }
 }
 .hero-text{

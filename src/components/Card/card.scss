@@ -1,6 +1,6 @@
 @import "bootstrap/scss/mixins/_transition.scss";
 @import "bootstrap/scss/_functions.scss";
-@import "argon-design-system-free/assets/scss/custom/_variables.scss";
+@import "argon-m2/assets/scss/custom/_variables.scss";
 
 @each $color, $value in $theme-colors {
     $rgbaColor: rgba($value, .7);

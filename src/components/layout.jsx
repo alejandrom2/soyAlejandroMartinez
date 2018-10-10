@@ -4,7 +4,7 @@ import "font-awesome/scss/font-awesome.scss";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-import 'argon-design-system-free/assets/scss/argon.scss';
+import 'argon-m2/assets/scss/argon.scss';
 import "./layout.scss";
 
 library.add(fab, fas)

@@ -3,8 +3,7 @@ import './termynal.scss';
 
 class Terminal extends React.Component {
   componentDidMount () {
-      let Termynal;
-      Termynal('#termynal');
+      const terminal = new Termynal('#termynal');// eslint-disable-line no-unused-vars, no-undef
   }
   render() {
     return (

@@ -21,9 +21,9 @@ class AboutMe extends React.Component {
                     <span className="btn-inner--icon"><FontAwesomeIcon icon={['fab', 'linkedin-in']} /></span>
                     <span className="btn-inner--text">LinkedIn</span>
                   </a>
-                  <a href="https://www.linkedin.com/alejandromartinezaem" className="btn btn-white btn-icon mb-3">
-                    <span className="btn-inner--icon"><FontAwesomeIcon icon={['fab', 'medium-m']} /></span>
-                    <span className="btn-inner--text">Medium</span>
+                  <a href="https://twitter.com/alejandrom2soy" className="btn btn-info btn-icon mb-3">
+                    <span className="btn-inner--icon"><FontAwesomeIcon icon={['fab', 'twitter']} /></span>
+                    <span className="btn-inner--text">Twitter</span>
                   </a>
                 </div>
               </div>

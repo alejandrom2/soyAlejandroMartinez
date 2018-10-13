@@ -19,7 +19,7 @@ class Terminal extends React.Component {
         <div data-ty data-ty-prompt="├── [Palo Alto / CA]"><a className="text-danger font-weight-bold"  target="_blank" rel="noopener noreferrer" href="https://www.tesla.com/energy">Tesla</a></div>
         <div data-ty data-ty-prompt="│ └── (May - August 2018)"><b>Software Engineer Intern</b>
           <div className="job-desc">
-            <div className="tab">1Built scripts to optimize the deployment of multiple applications through a universal pipeline, increasing ease of new project development and deployment utilizing Docker containers and Jenkins.</div>
+            <div className="tab">Built scripts to optimize the deployment of multiple applications through a universal pipeline, increasing ease of new project development and deployment utilizing Docker containers and Jenkins.</div>
             <div className="tab">Improved service tool utilized by entire engineering support team, maximizing ease of use of common tools to predict and solve energy and vehicle product issues, written in Python and React.</div>
             <div className="tab">Participated in the development of internal systems using object-oriented design and agile processes, scoping work for future team projects.</div>
             <div className="tab">Assisted in Model 3 general assembly in both mechanical and managerial duties, optimizing the production rate of Model 3s during push to produce 5,000 vehicles per week.</div>
@@ -28,19 +28,21 @@ class Terminal extends React.Component {
         <div data-ty data-ty-prompt="├── [Northridge / CA]"><a className="text-danger font-weight-bold"  target="_blank" rel="noopener noreferrer" href="https://www.metalab.csun.edu/">META+LAB</a></div>
         <div data-ty data-ty-prompt="│ └── (September 2015 – May 2018)"><b>Back-end Web Developer / Scrum Master</b>
           <div className="job-desc">
-            <div className="tab">2Built scripts to optimize the deployment of multiple applications through a universal pipeline, increasing ease of new project development and deployment utilizing Docker containers and Jenkins.</div>
-            <div className="tab">Improved service tool utilized by entire engineering support team, maximizing ease of use of common tools to predict and solve energy and vehicle product issues, written in Python and React.</div>
-            <div className="tab">Participated in the development of internal systems using object-oriented design and agile processes, scoping work for future team projects.</div>
-            <div className="tab">Assisted in Model 3 general assembly in both mechanical and managerial duties, optimizing the production rate of Model 3s during push to produce 5,000 vehicles per week.</div>
+            <div className="tab">Led team scrum ceremonies and communicated with a project manager and product owner ensuring a deliverable sprint scope and expected product release.</div>
+            <div className="tab">Developed four applications using a PHP Framework to handle user authentication, storage of faculty class data and project details, and delivery of dynamic data to front-end developers.</div>
+            <div className="tab">Created database schemas using MySQL in order to organize data from multiple applications and built model logic using Object-relational mapping.</div>
+            <div className="tab">Integrated 3rd party services including IBM Watson, and full-text search engines to make usage of natural language understanding to better organize user inputted data and improve search speed and accuracy.</div>
+            <div className="tab">Developed and updated documentation to strengthen quality and functionality of public-facing APIs.</div>
           </div>
         </div>
         <div data-ty data-ty-prompt="├── [San Fransisco / CA]"><a className="text-danger font-weight-bold"  target="_blank" rel="noopener noreferrer" href="https://www.macys.com">Macy’s Technology</a></div>
         <div data-ty data-ty-prompt="│ └── (May - August 2017)"><b>Software Engineer Intern</b>
           <div className="job-desc">
-            <div className="tab">1Built scripts to optimize the deployment of multiple applications through a universal pipeline, increasing ease of new project development and deployment utilizing Docker containers and Jenkins.</div>
-            <div className="tab">Improved service tool utilized by entire engineering support team, maximizing ease of use of common tools to predict and solve energy and vehicle product issues, written in Python and React.</div>
-            <div className="tab">Participated in the development of internal systems using object-oriented design and agile processes, scoping work for future team projects.</div>
-            <div className="tab">Assisted in Model 3 general assembly in both mechanical and managerial duties, optimizing the production rate of Model 3s during push to produce 5,000 vehicles per week.</div>
+            <div className="tab">Implemented Lean methodology experiments to improve visuals and functionality of the check-out shopping experience in order to minimize cart abandonment.</div>
+            <div className="tab">Contributed functional code to projects using Java Spring, Node.js, and Backbone.js.</div>
+            <div className="tab">Interacted with VPs, directors, and technology managers consulting on our intern summer project, helping iterate our application.</div>
+            <div className="tab">Led a team of 4 software engineering interns to create a proposed software architecture and deliver a functional minimum viable product web API and mobile iOS application.</div>
+
             <div data-ty data-ty-prompt="└──">.</div>
           </div>
         </div>

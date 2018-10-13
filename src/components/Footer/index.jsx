@@ -29,27 +29,27 @@ class Footer extends Component {
           </div>
           <div className="row justify-content-center text-center">
             <div className="col-lg-2 col-4">
-              <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-white rounded-circle">
+              <a href="mailto:hi@alejandromartinez.soy" className="btn border-0 icon icon-shape bg-white rounded-circle">
                 <FontAwesomeIcon className="text-dark" icon="envelope-open" />
               </a>
             </div>
             <div className="col-lg-2 col-4">
-              <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-info rounded-circle">
+              <a href="https://www.linkedin.com/in/alejandromartinezaem/" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-info rounded-circle">
                 <FontAwesomeIcon className="text-white" icon={['fab', 'linkedin-in']} />
               </a>
             </div>
             <div className="col-lg-2 col-4">
-              <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-dark rounded-circle">
+              <a href="https://github.com/alejandrom2/" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-dark rounded-circle">
                 <FontAwesomeIcon className="text-white" icon={['fab', 'github']} />
               </a>
             </div>
-            <div className="col-lg-2 col-4">
+            {/* <div className="col-lg-2 col-4">
               <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-white rounded-circle">
                 <FontAwesomeIcon className="text-dark" icon={['fab', 'medium-m']} />
               </a>
-            </div>
+            </div> */}
             <div className="col-lg-2 col-4">
-              <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-info rounded-circle">
+              <a href="https://twitter.com/alejandrom2soy" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-info rounded-circle">
                 <FontAwesomeIcon className="text-primary" icon={['fab', 'twitter']} />
               </a>
             </div>

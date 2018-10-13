@@ -17,13 +17,14 @@ export default class MainLayout extends React.Component {
       <div>
         <Helmet>
           <meta name="description" />
+          <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet" />
         </Helmet>
-        <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet" />
         {children}
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" />
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" />
         <script src="./assets/js/argon.min.js" />
+        <script src="./assets/js/termynal.min.js" />
       </div>
     );
   }

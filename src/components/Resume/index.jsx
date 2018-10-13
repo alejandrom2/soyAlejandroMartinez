@@ -1,7 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Terminal from '../Terminal';
-import './resume.scss'
+import './resume.scss';
+import TrackVisibility from 'react-on-screen';
+
+const TrackedTerminal = ({ isVisible }) => {
+    return (<Terminal />);
+}
 
 class Resume extends React.Component {
   render() {
@@ -21,8 +26,10 @@ class Resume extends React.Component {
               </button>
             </div>
           </div>
-          <Terminal />
-        </div>
+          <TrackVisibility once>
+            {({ isVisible }) => isVisible && <TrackedTerminal />}
+          </TrackVisibility>
+          </div>
       </section>
       );
   }

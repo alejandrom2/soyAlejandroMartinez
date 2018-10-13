@@ -1,10 +1,12 @@
 import React from "react";
 import Helmet from "react-helmet";
-import "font-awesome/scss/font-awesome.scss";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
+import "font-awesome/scss/font-awesome.scss";
 import 'argon-m2/assets/scss/argon.scss';
+import config from "../../config/SiteConfig";
+import SEO from "./SEO";
 import "./layout.scss";
 
 library.add(fab, fas)
@@ -15,8 +17,8 @@ export default class MainLayout extends React.Component {
     const { children } = this.props;
     return (
       <div>
-        <Helmet>
-          <meta name="description" />
+        <Helmet title={config.siteTitle}>
+          <SEO />
           <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet" />
         </Helmet>
         {children}

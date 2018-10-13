@@ -3,7 +3,8 @@ import './termynal.scss';
 
 class Terminal extends React.Component {
   componentDidMount () {
-      var termynal = new Termynal('#termynal');
+      let Termynal;
+      Termynal('#termynal');
   }
   render() {
     return (

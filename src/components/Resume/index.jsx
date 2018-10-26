@@ -19,7 +19,7 @@ class Resume extends React.Component {
               <br />
               <button className="btn btn-icon btn-3 btn-default" type="button">
                 <span className="btn-inner--icon"><FontAwesomeIcon icon="file-download" /></span>
-                <a href={withPrefix('/alejandrom_resume.pdf')} rel="noopener noreferrer" className="btn-inner--text text-white" target="_blank" >Download my PDF resume</a>
+                <a href={withPrefix('/alejandrom_resume.pdf')} className="btn-inner--text text-white"  >Download my PDF resume</a>
               </button>
             </div>
           </div>

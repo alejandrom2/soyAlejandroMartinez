@@ -21,9 +21,9 @@ class AboutMe extends React.Component {
                     <span className="btn-inner--icon"><FontAwesomeIcon icon={['fab', 'linkedin-in']} /></span>
                     <span className="btn-inner--text">LinkedIn</span>
                   </a>
-                  <a href="https://www.linkedin.com/alejandromartinezaem" className="btn btn-white btn-icon mb-3">
-                    <span className="btn-inner--icon"><FontAwesomeIcon icon={['fab', 'medium-m']} /></span>
-                    <span className="btn-inner--text">Medium</span>
+                  <a href="https://twitter.com/alejandrom2soy" className="btn btn-info btn-icon mb-3">
+                    <span className="btn-inner--icon"><FontAwesomeIcon icon={['fab', 'twitter']} /></span>
+                    <span className="btn-inner--text">Twitter</span>
                   </a>
                 </div>
               </div>
@@ -31,7 +31,7 @@ class AboutMe extends React.Component {
             <div className="col-lg-6 order-lg-1">
               <div className="d-flex px-3">
                 <div className="d-none d-lg-block">
-                  <span role="img" className="emoji-slant" aria-label="">🎩</span>
+                  <div role="img" className="emoji-slant" aria-label="">🎩</div>{/* eslint-disable-line jsx-a11y/accessible-emoji */}
                 </div>
                 <div className="pl-4">
                   <h2 className="display-3 text-white" id="name">Who am I?</h2>
@@ -40,10 +40,10 @@ class AboutMe extends React.Component {
                     Passionate leader with over five years of experience managing teams and organizations, as well as holding the ability to communicate with key corporate executives.
                   </p>
 
-                  <button className="btn btn-lg btn-icon btn-3 btn-white" type="button">
+                  {/* <button className="btn btn-lg btn-icon btn-3 btn-white" type="button">
                     <span className="btn-inner--icon"><FontAwesomeIcon icon="glasses" /></span>
                     <span className="btn-inner--text">Find out more!</span>
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>

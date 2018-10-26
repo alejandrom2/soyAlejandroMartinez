@@ -23,10 +23,10 @@ class Projects extends React.Component {
               <div className="row row-grid">
                 <Card 
                   title="Formula SAE Electric" 
-                  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit"
+                  description="Coming Soon..."
                   color="info"
                   link="#"
-                  badges={["Django","React","API","Big Data"]}
+                  badges={["Python","PostgreSQL","API","Big Data","Web Socket"]}
                   icon="car-battery"
                 />
                 <Card 
@@ -34,7 +34,7 @@ class Projects extends React.Component {
                   description="Contributed to the Desktop and Mobile Shopping Bag application. Made changes to both front-end and back-end using Java Spring, Node.JS, and Handlebar.JS." 
                   color="danger" 
                   link="#" 
-                  badges={["Java"]} 
+                  badges={["Java","Spring","Lean","HandleBar.JS"]} 
                   icon="shopping-bag"
                 />
                 <Card 
@@ -42,7 +42,7 @@ class Projects extends React.Component {
                   description="A digital showcase of professional and service-related activities being completed by faculty members, engaging students and fellow colleagues in order to collaborate between work of common interest and expand on their interdisciplinary connections." 
                   color="danger"
                   link="#" 
-                  badges={["IBM Watson"]} 
+                  badges={["IBM Watson","PHP","Laravel"]} 
                   icon="user-graduate"
                 />
                 <Card 
@@ -52,24 +52,16 @@ class Projects extends React.Component {
                   color="danger"
                   link="#" 
                   badges={[
-                      "Laravel"]} 
+                      "PHP","Laravel"]} 
                   icon="chalkboard-teacher"
                 />
                 <Card 
                   title="CSUN Web Services" 
-                  description="Our Web Services Micro Services are built to provide campus data to external and internal applications."
+                  description="A collection of web services developed to provide API access to many of the university's resources."
                   color="success" 
                   link="#" 
-                  badges={["Laravel"]} 
+                  badges={["Lumen","PHP","REST","MySQL"]} 
                   icon="server"
-                />
-                <Card 
-                  title="Internal Management System (IMS)" 
-                  description="Our Web Services Micro Services are built to provide campus data to external and internal applications."
-                  color="primary" 
-                  link="#" 
-                  badges={["Laravel"]} 
-                  icon="truck-pickup"
                 />
               </div>
             </div>

@@ -26,10 +26,10 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Alejandro Martinez',
-        short_name: 'AlejandroM2',
+        short_name: 'SoyAlejandro',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#181818',
+        theme_color: '#181818',
         display: `minimal-ui`,
         icon: 'src/images/icon.png', // This path is relative to the root of the site.
       },

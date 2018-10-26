@@ -7,7 +7,7 @@ module.exports = {
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
+  googleAnalyticsID: "UA-128156786-1", // GA tracking ID.
   postDefaultCategoryID: "Tech", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.

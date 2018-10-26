@@ -2,6 +2,7 @@ import React from "react";
 import { withPrefix } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TrackVisibility from 'react-on-screen';
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Terminal from '../Terminal';
 import './resume.scss';
 
@@ -19,7 +20,7 @@ class Resume extends React.Component {
               <br />
               <button className="btn btn-icon btn-3 btn-default" type="button">
                 <span className="btn-inner--icon"><FontAwesomeIcon icon="file-download" /></span>
-                <a href={withPrefix('/alejandrom_resume.pdf')} className="btn-inner--text text-white"  >Download my PDF resume</a>
+                <OutboundLink href={withPrefix('/alejandrom_resume.pdf')} className="btn-inner--text text-white"  >Download my PDF resume</OutboundLink>
               </button>
             </div>
           </div>

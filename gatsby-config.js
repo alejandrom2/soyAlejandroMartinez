@@ -35,6 +35,16 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: config.googleAnalyticsID,
+        head: false,
+        respectDNT: true,
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        cookieDomain: "alejandromartinez.soy",
+      },
+    },
+    {
       resolve: "gatsby-plugin-nprogress",
       options: {
         color: config.themeColor

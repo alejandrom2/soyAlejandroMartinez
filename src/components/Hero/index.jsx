@@ -16,7 +16,7 @@ class Hero extends React.Component {
       <div className="hero-section ">
         <div className="hero-text-center container">
           <div className="col-lg-9 m-auto">
-            <SubText>Hi. Hola. I am</SubText>
+            <SubText>Hola. Soy</SubText>
             <Text>ALEJANDRO</Text>
             <Text>AND I <span id="highlight">DEVELOP</span></Text>
             <Text>SOFTWARE

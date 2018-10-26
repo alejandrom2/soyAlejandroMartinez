@@ -15,7 +15,7 @@ class Terminal extends React.Component {
         </div>
         <div id="termynal" data-termynal data-ty-typedelay="40" data-ty-linedelay="700" >
           <div data-ty><b className="text-info">alejandromartinez.soy</b> on <b className="text-primary">master</b> is 📦 <b className="text-danger">v1.1.0</b> via <b className="text-success">⬢ v10.11.0</b></div>
-          <div data-ty="input">tree ./expirence</div>
+          <div data-ty="input">tree ./experience</div>
           <div data-ty="progress">.</div>
           <div data-ty data-ty-prompt="├── [Palo Alto / CA]"><a className="text-danger font-weight-bold"  target="_blank" rel="noopener noreferrer" href="https://www.tesla.com/energy">Tesla</a></div>
           <div data-ty data-ty-prompt="│ └── (May - August 2018)"><b>Software Engineer Intern</b>

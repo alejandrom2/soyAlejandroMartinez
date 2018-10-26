@@ -14,11 +14,11 @@ class Resume extends React.Component {
               <div className="icon icon-shape bg-white rounded-circle text-success">
                 <FontAwesomeIcon icon="terminal" />
               </div>
-              <h2 className="display-3 d-inline pl-4 text-white">Work Expirence</h2>
+              <h2 className="display-3 d-inline pl-4 text-white">Work Experience</h2>
               <br />
               <button className="btn btn-icon btn-3 btn-default" type="button">
                 <span className="btn-inner--icon"><FontAwesomeIcon icon="file-download" /></span>
-                <span className="btn-inner--text">Download my PDF resume</span>
+                <a href="/alejandrom_resume.pdf" className="btn-inner--text text-white" target="_blank" >Download my PDF resume</a>
               </button>
             </div>
           </div>

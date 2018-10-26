@@ -1,11 +1,11 @@
 module.exports = {
   siteTitle: "Alejandro Martinez", // Site title.
-  siteTitleShort: "AlejandroM2", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteTitleShort: "Alejandro M2", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "Student | Developer | Latinx", // Alternative site title for SEO.
-  siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
+  siteLogo: "/assets/sticker.png", // Logo used for SEO and manifest.
   siteUrl: "https://www.aleajndromartinez.soy", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "Eh", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
   postDefaultCategoryID: "Tech", // Default category for posts.
@@ -14,24 +14,24 @@ module.exports = {
   userName: "Advanced User", // Username to display in the author segment.
   userTwitter: "@alejandrom2", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "Los Angeles, CA", // User location to display in the author segment.
-  userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
+  userAvatar: "/assets/sticker.png", // User avatar to display in the author segment.
   userDescription:
-    "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
+    "", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {
       label: "GitHub",
-      url: "https://github.com/Vagr9K/gatsby-advanced-starter",
+      url: "https://github.com/alejandrom2",
       iconClassName: "fa fa-github"
     },
     {
       label: "Twitter",
-      url: "https://twitter.com/Vagr9K",
+      url: "https://twitter.com/soyalejandrom2",
       iconClassName: "fa fa-twitter"
     },
     {
       label: "Email",
-      url: "mailto:vagr9k@gmail.com",
+      url: "mailto:hi@alejandromartinez.soy",
       iconClassName: "fa fa-envelope"
     }
   ],

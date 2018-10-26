@@ -1,4 +1,5 @@
 import React from "react";
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'typeface-montserrat/index.css';
 import './aboutme.scss';
@@ -13,18 +14,18 @@ class AboutMe extends React.Component {
               <div className="position-relative pl-md-5 transform-perspective-right">
                 <img src="./assets/header.jpeg" className="img-center img-fluid" alt="" />
                 <div className="mt-3 text-center">
-                  <a href="https://www.github.com/alejandrom2" className="btn btn-dark btn-icon mb-3">
+                  <OutboundLink href="https://www.github.com/alejandrom2" className="btn btn-dark btn-icon mb-3">
                     <span className="btn-inner--icon"><FontAwesomeIcon icon={['fab', 'github']} /></span>
                     <span className="btn-inner--text">Github</span>
-                  </a>
-                  <a href="https://www.linkedin.com/in/alejandromartinezaem/" className="btn btn-primary btn-icon mb-3">
+                  </OutboundLink>
+                  <OutboundLink href="https://www.linkedin.com/in/alejandromartinezaem/" className="btn btn-primary btn-icon mb-3">
                     <span className="btn-inner--icon"><FontAwesomeIcon icon={['fab', 'linkedin-in']} /></span>
                     <span className="btn-inner--text">LinkedIn</span>
-                  </a>
-                  <a href="https://twitter.com/alejandrom2soy" className="btn btn-info btn-icon mb-3">
+                  </OutboundLink>
+                  <OutboundLink href="https://twitter.com/alejandrom2soy" className="btn btn-info btn-icon mb-3">
                     <span className="btn-inner--icon"><FontAwesomeIcon icon={['fab', 'twitter']} /></span>
                     <span className="btn-inner--text">Twitter</span>
-                  </a>
+                  </OutboundLink>
                 </div>
               </div>
             </div>

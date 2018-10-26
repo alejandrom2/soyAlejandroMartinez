@@ -1,4 +1,5 @@
 import React from "react";
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import './termynal.scss';
 
 class Terminal extends React.Component {
@@ -17,7 +18,7 @@ class Terminal extends React.Component {
           <div data-ty><b className="text-info">alejandromartinez.soy</b> on <b className="text-primary">master</b> is 📦 <b className="text-danger">v1.1.0</b> via <b className="text-success">⬢ v10.11.0</b></div>
           <div data-ty="input">tree ./experience</div>
           <div data-ty="progress">.</div>
-          <div data-ty data-ty-prompt="├── [Palo Alto / CA]"><a className="text-danger font-weight-bold"  target="_blank" rel="noopener noreferrer" href="https://www.tesla.com/energy">Tesla</a></div>
+          <div data-ty data-ty-prompt="├── [Palo Alto / CA]"><OutboundLink className="text-danger font-weight-bold"  target="_blank" rel="noopener noreferrer" href="https://www.tesla.com/energy">Tesla</OutboundLink></div>
           <div data-ty data-ty-prompt="│ └── (May - August 2018)"><b>Software Engineer Intern</b>
             <div className="job-desc">
               <div className="tab">Built scripts to optimize the deployment of multiple applications through a universal pipeline, increasing ease of new project development and deployment utilizing Docker containers and Jenkins.</div>
@@ -26,7 +27,7 @@ class Terminal extends React.Component {
               <div className="tab">Assisted in Model 3 general assembly in both mechanical and managerial duties, optimizing the production rate of Model 3s during push to produce 5,000 vehicles per week.</div>
             </div>
           </div>
-          <div data-ty data-ty-prompt="├── [Northridge / CA]"><a className="text-danger font-weight-bold"  target="_blank" rel="noopener noreferrer" href="https://www.metalab.csun.edu/">META+LAB</a></div>
+          <div data-ty data-ty-prompt="├── [Northridge / CA]"><OutboundLink className="text-danger font-weight-bold"  target="_blank" rel="noopener noreferrer" href="https://www.metalab.csun.edu/">META+LAB</OutboundLink></div>
           <div data-ty data-ty-prompt="│ └── (September 2015 – May 2018)"><b>Back-end Web Developer / Scrum Master</b>
             <div className="job-desc">
               <div className="tab">Led team scrum ceremonies and communicated with a project manager and product owner ensuring a deliverable sprint scope and expected product release.</div>
@@ -36,7 +37,7 @@ class Terminal extends React.Component {
               <div className="tab">Developed and updated documentation to strengthen quality and functionality of public-facing APIs.</div>
             </div>
           </div>
-          <div data-ty data-ty-prompt="├── [San Fransisco / CA]"><a className="text-danger font-weight-bold"  target="_blank" rel="noopener noreferrer" href="https://www.macys.com">Macy’s Technology</a></div>
+          <div data-ty data-ty-prompt="├── [San Fransisco / CA]"><OutboundLink className="text-danger font-weight-bold"  target="_blank" rel="noopener noreferrer" href="https://www.macys.com">Macy’s Technology</OutboundLink></div>
           <div data-ty data-ty-prompt="│ └── (May - August 2017)"><b>Software Engineer Intern</b>
             <div className="job-desc">
               <div className="tab">Implemented Lean methodology experiments to improve visuals and functionality of the check-out shopping experience in order to minimize cart abandonment.</div>

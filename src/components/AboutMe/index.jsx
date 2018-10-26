@@ -40,10 +40,10 @@ class AboutMe extends React.Component {
                     Passionate leader with over five years of experience managing teams and organizations, as well as holding the ability to communicate with key corporate executives.
                   </p>
 
-                  {/*<button className="btn btn-lg btn-icon btn-3 btn-white" type="button">
+                  {/* <button className="btn btn-lg btn-icon btn-3 btn-white" type="button">
                     <span className="btn-inner--icon"><FontAwesomeIcon icon="glasses" /></span>
                     <span className="btn-inner--text">Find out more!</span>
-                  </button>*/}
+                  </button> */}
                 </div>
               </div>
             </div>

@@ -1,20 +1,32 @@
 import React from "react";
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import Fullscreen from "react-full-screen";
 import './termynal.scss';
 
 class Terminal extends React.Component {
-  componentDidMount () {
-      const terminal = new Termynal('#termynal');// eslint-disable-line no-unused-vars, no-undef
-  }
-  render() {
-    return (
-      <div className="col-12 terminal bg-term shadow">
-        <div className="buttons">
-          <button className="btn btn-term term-close" href="#" />
-          <button className="btn btn-term term-min" href="#" />
-          <button className="btn btn-term term-max" href="#" />
-        </div>
-        <div id="termynal" data-termynal data-ty-typedelay="40" data-ty-linedelay="700" >
+    constructor() {
+        super();
+        this.state = {
+          hidden:false,
+          isFull: false
+      };
+    }
+    componentDidUpdate(){
+        const terminal = new Termynal('#termynal');// eslint-disable-line no-unused-vars, no-undef
+    }
+    hide = () => {
+        this.setState({ hidden: !this.state.hidden})
+    }
+    goFull = () => {
+        this.setState({ isFull: !this.state.isFull });
+    }
+    close = () => {
+        window.open('404', '_blank');
+    }
+    render(){
+        function Term(props){
+      return(
+        <div id="termynal" style={{display: props.hidden?'none':'block' }} data-termynal data-ty-typedelay="40" data-ty-linedelay="700" >
           <div data-ty><b className="text-info">alejandromartinez.soy</b> on <b className="text-primary">master</b> is 📦 <b className="text-danger">v1.1.0</b> via <b className="text-success">⬢ v10.11.0</b></div>
           <div data-ty="input">tree ./experience</div>
           <div data-ty="progress">.</div>
@@ -49,8 +61,26 @@ class Terminal extends React.Component {
             </div>
           </div>
           <div data-ty>3 work positions.</div>
-        </div>
-      </div>);
-  }
+        </div>);
+        }
+        return (
+          <Fullscreen
+            enabled={this.state.isFull}
+            onChange={isFull => this.setState({isFull})}
+          >
+            <div className="col-12 terminal bg-term shadow">
+              <div className="buttons">
+                <button className="btn btn-term term-close" onClick={this.close} />
+                <button className={`btn btn-term term-min ${this.state.isFull?'disabled':''}`} onClick={this.hide} disabled={this.state.isFull} />
+                <button className="btn btn-term term-max" onClick={this.goFull} />
+              </div>
+              <Term hidden={this.state.hidden} />
+            </div>
+          </Fullscreen>
+  );
+    }
 }
+
+
+Terminal.defaultProps = { hidden: false };
 export default Terminal;

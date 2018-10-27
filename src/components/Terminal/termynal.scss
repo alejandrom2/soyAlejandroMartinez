@@ -15,6 +15,9 @@
     position:absolute;
     top:20px;
     left:20px;
+    .disabled{
+        background: rgb(208,208,208)!important
+    }
     .term-close{
         background:#d9515d;
     }
@@ -48,6 +51,7 @@
     position: relative;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    height:100%;
 }
 
 

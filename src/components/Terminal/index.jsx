@@ -12,7 +12,7 @@ class Terminal extends React.Component {
     };
   }
   componentDidUpdate () {
-      // const terminal = new Termynal('#termynal');// eslint-disable-line no-unused-vars, no-undef
+      const terminal = new Termynal('#termynal');// eslint-disable-line no-unused-vars, no-undef
   }
   hide = () => {
     this.setState({ hidden: !this.state.hidden})

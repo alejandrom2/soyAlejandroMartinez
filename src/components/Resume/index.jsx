@@ -2,7 +2,7 @@ import React from "react";
 import { withPrefix } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TrackVisibility from 'react-on-screen';
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import Terminal from '../Terminal';
 import './resume.scss';
 

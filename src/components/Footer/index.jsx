@@ -29,27 +29,27 @@ class Footer extends Component {
             </div>
           </div>
           <div className="row justify-content-center text-center">
-            <div className="col-lg-2 col-4">
+            <div className="col-lg-2 col-4 pt-sm">
               <OutboundLink href="mailto:hi@alejandromartinez.soy" className="btn border-0 icon icon-shape bg-white rounded-circle">
                 <FontAwesomeIcon className="text-dark" icon="envelope-open" />
               </OutboundLink>
             </div>
-            <div className="col-lg-2 col-4">
+            <div className="col-lg-2 col-4 pt-sm">
               <OutboundLink href="https://www.linkedin.com/in/alejandromartinezaem/" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-info rounded-circle">
                 <FontAwesomeIcon className="text-white" icon={['fab', 'linkedin-in']} />
               </OutboundLink>
             </div>
-            <div className="col-lg-2 col-4">
+            <div className="col-lg-2 col-4 pt-sm">
               <OutboundLink href="https://github.com/alejandrom2/" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-dark rounded-circle">
                 <FontAwesomeIcon className="text-white" icon={['fab', 'github']} />
               </OutboundLink>
             </div>
-            {/* <div className="col-lg-2 col-4">
+            {/* <div className="col-lg-2 col-4 pt-sm">
               <OutboundLink href="https://www.creative-tim.com/product/argon-design-system" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-white rounded-circle">
                 <FontAwesomeIcon className="text-dark" icon={['fab', 'medium-m']} />
               </OutboundLink>
             </div> */}
-            <div className="col-lg-2 col-4">
+            <div className="col-lg-2 col-4 pt-sm">
               <OutboundLink href="https://twitter.com/alejandrom2soy" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-info rounded-circle">
                 <FontAwesomeIcon className="text-primary" icon={['fab', 'twitter']} />
               </OutboundLink>

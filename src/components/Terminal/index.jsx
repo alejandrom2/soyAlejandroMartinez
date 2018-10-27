@@ -26,7 +26,7 @@ class Terminal extends React.Component {
     render(){
         function Term(props){
       return(
-        <div id="termynal" style={{display: props.hidden?'none':'block' }} data-termynal data-ty-typedelay="40" data-ty-linedelay="700" >
+        <div id="termynal" className="inner-terminal" style={{display: props.hidden?'none':'block' }} data-termynal data-ty-typedelay="40" data-ty-linedelay="700" >
           <div data-ty><b className="text-info">alejandromartinez.soy</b> on <b className="text-primary">master</b> is 📦 <b className="text-danger">v1.1.0</b> via <b className="text-success">⬢ v10.11.0</b></div>
           <div data-ty="input">tree ./experience</div>
           <div data-ty="progress">.</div>

@@ -73,8 +73,13 @@ h2.hero-text{
         width: 10rem;
     }
     @media (max-height: 850px){
+        width:10rem;
+        margin-left:55%;
+    }
+    @media (max-height: 350px){
         display:none;
     }
+
     // @include media-breakpoint-up(md) {
     //     width: 15rem;
     // }

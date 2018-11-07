@@ -5,7 +5,11 @@
  * @version 0.0.1
  * @license MIT
  */
-
+    
+#termynal{
+    overflow:scroll;
+    max-height: 100%;
+}
 :root {
     --color-bg: #252a33;
     --color-text: #eee;

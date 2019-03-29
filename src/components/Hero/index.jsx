@@ -5,7 +5,7 @@ import "./hero.scss";
 import particlesJSON from './particles.json';
 
 class Hero extends React.Component {
-  render(props) {
+  render() {
     function Text(props){
       return(<h1 className="hero-text">{props.children}</h1>);
     }

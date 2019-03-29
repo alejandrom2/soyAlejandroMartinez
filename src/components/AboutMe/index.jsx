@@ -33,7 +33,7 @@ class AboutMe extends React.Component {
               <div className="d-flex px-3">
                 <div className="d-none d-lg-block">
                   <div role="img" className="emoji-slant" aria-label="">🎩</div>{/* eslint-disable-line jsx-a11y/accessible-emoji */}
-                </ div>
+                </div>
                 <div className="pl-4">
                   <h2 className="display-3 text-white" id="name">Who am I?</h2>
                   <p className="text-white">I am a software engineer with over three years of experience developing web applications.<br />

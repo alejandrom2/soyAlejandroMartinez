@@ -200,7 +200,7 @@ class Terminal extends React.Component {
               </div>
             </div>
           </div>
-          <div data-ty>3 work positions.</div>
+          <div data-ty>4 work positions.</div>
         </div>
       )
         }

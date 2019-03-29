@@ -63,8 +63,8 @@ class Terminal extends React.Component {
               </div>
               <div className="tab">
                 Built a NodeJS web service handling over 80 data points
-                per second from the vehicle's Data Acquisition System via
-                web sockets and a time series Postgres database.
+                per second from the vehicle&apos;s Data Acquisition System
+                via web sockets and a time series Postgres database.
               </div>
               <div className="tab">
                 Architected Docker web server supporting Grafana, Node JS,
@@ -115,9 +115,9 @@ class Terminal extends React.Component {
                 create microservices easily.
               </div>
               <div className="tab">
-                Participated in the development of internal systems
-                using object-oriented design and agile processes, scoping
-                work for future team projects.
+                Participated in the development of internal systems using
+                object-oriented design and agile processes, scoping work
+                for future team projects.
               </div>
             </div>
           </div>

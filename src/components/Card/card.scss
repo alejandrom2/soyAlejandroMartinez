@@ -2,6 +2,14 @@
 @import "bootstrap/scss/_functions.scss";
 @import "argon-m2/assets/scss/custom/_variables.scss";
 
+a{
+    color:unset;
+    text-decoration: unset;
+    &:hover{
+        color:unset;
+        text-decoration: none;
+    }
+}
 @each $color, $value in $theme-colors {
     $rgbaColor: rgba($value, .7);
     $gradientColor: linear-gradient(87deg, $rgbaColor 0, adjust-hue($rgbaColor, 25%) 100%);

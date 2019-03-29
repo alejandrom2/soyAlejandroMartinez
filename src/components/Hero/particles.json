@@ -10,97 +10,97 @@
       "type": "images",
       "images": [
         {
-          "src": "./assets/shapes/1.png",
+          "src": "../assets/shapes/1.png",
           "width": 200,
           "height": 200
         },
         {
-          "src": "./assets/shapes/2.png",
+          "src": "../assets/shapes/2.png",
           "width": 200,
           "height": 200
         },
         {
-          "src": "./assets/shapes/3.png",
+          "src": "../assets/shapes/3.png",
           "width": 200,
           "height": 200
         },
         {
-          "src": "./assets/shapes/4.png",
+          "src": "../assets/shapes/4.png",
           "width": 200,
           "height": 200
         },
         {
-          "src": "./assets/shapes/5.png",
+          "src": "../assets/shapes/5.png",
           "width": 80,
           "height": 50
         },
         {
-          "src": "./assets/shapes/6.png",
+          "src": "../assets/shapes/6.png",
           "width": 50,
           "height": 50
         },
         {
-          "src": "./assets/shapes/7.png",
+          "src": "../assets/shapes/7.png",
           "width": 200,
           "height": 200
         },
         {
-          "src": "./assets/shapes/8.png",
+          "src": "../assets/shapes/8.png",
           "width": 200,
           "height": 200
         },
         {
-          "src": "./assets/shapes/9.png",
+          "src": "../assets/shapes/9.png",
           "width": 75,
           "height": 200
         },
         {
-          "src": "./assets/shapes/10.png",
+          "src": "../assets/shapes/10.png",
           "width": 200,
           "height": 80
         },
         {
-          "src": "./assets/shapes/11.png",
+          "src": "../assets/shapes/11.png",
           "width": 200,
           "height": 100
         },
         {
-          "src": "./assets/shapes/12.png",
+          "src": "../assets/shapes/12.png",
           "width": 100,
           "height": 80
         },
         {
-          "src": "./assets/shapes/13.png",
+          "src": "../assets/shapes/13.png",
           "width": 200,
           "height": 80
         },
         {
-          "src": "./assets/shapes/14.png",
+          "src": "../assets/shapes/14.png",
           "width": 200,
           "height": 200
         },
         {
-          "src": "./assets/shapes/15.png",
+          "src": "../assets/shapes/15.png",
           "width": 200,
           "height": 200
         },
         {
-          "src": "./assets/shapes/16.png",
+          "src": "../assets/shapes/16.png",
           "width": 50,
           "height": 100
         },
         {
-          "src": "./assets/shapes/17.png",
+          "src": "../assets/shapes/17.png",
           "width": 80,
           "height": 100
         },
         {
-          "src": "./assets/shapes/18.png",
+          "src": "../assets/shapes/18.png",
           "width": 200,
           "height": 200
         },
         {
-          "src": "./assets/shapes/19.png",
+          "src": "../assets/shapes/19.png",
           "width": 200,
           "height": 200
         }

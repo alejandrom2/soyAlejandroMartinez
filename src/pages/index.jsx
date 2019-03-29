@@ -7,14 +7,14 @@ import Projects from "../components/Projects";
 import Resume from "../components/Resume";
 import Footer from "../components/Footer";
 
-
 class Index extends React.Component {
   render() {
     return (
       <Layout location={this.props.location} title="Home">
         <div>
           <Helmet />
-          <Hero />
+          <Hero>
+          </Hero>
           <AboutMe />
           <Projects />
           <Resume />
@@ -25,4 +25,4 @@ class Index extends React.Component {
   }
 }
 
-export default Index;
+export default Index; 

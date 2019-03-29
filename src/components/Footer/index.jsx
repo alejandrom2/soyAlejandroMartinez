@@ -59,7 +59,7 @@ class Footer extends Component {
           <div className="row text-center">
             <div className="col-12">
               <div className="copyright text-dark">
-            © 2018 Made with <FontAwesomeIcon icon="heart" className="text-danger" /> by Alejandro Martinez.
+                © {new Date().getFullYear()} Made with <FontAwesomeIcon icon="heart" className="text-danger" /> by Alejandro Martinez.
               </div>
             </div>
           </div>

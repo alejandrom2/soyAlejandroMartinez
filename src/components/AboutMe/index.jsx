@@ -40,11 +40,6 @@ class AboutMe extends React.Component {
                     Active member of the latinx community advocating for diversity in the technology field, by working with college and high school students to improve k-12 to college pipeline.<br />
                     Passionate leader with over five years of experience managing teams and organizations, as well as holding the ability to communicate with key corporate executives.
                   </p>
-
-                  {/* <button className="btn btn-lg btn-icon btn-3 btn-white" type="button">
-                    <span className="btn-inner--icon"><FontAwesomeIcon icon="glasses" /></span>
-                    <span className="btn-inner--text">Find out more!</span>
-                  </button> */}
                 </div>
               </div>
             </div>

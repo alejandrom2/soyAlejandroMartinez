@@ -7,7 +7,6 @@ import Projects from "../components/Projects";
 import Resume from "../components/Resume";
 import Footer from "../components/Footer";
 
-
 class Index extends React.Component {
   render() {
     return (
@@ -25,4 +24,4 @@ class Index extends React.Component {
   }
 }
 
-export default Index;
+export default Index; 

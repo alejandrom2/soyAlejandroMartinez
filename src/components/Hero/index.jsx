@@ -13,7 +13,7 @@ class Hero extends React.Component {
       return(<h2 className="hero-text">{props.children}</h2>);
     }
     return (
-      <div className="hero-section ">
+      <div className="hero-section">
         <div className="hero-text-center container">
           <div className="col-lg-9 m-auto">
             <SubText>Hola. Soy</SubText>
@@ -24,7 +24,7 @@ class Hero extends React.Component {
             </Text>
           </div>
         </div>
-        <Particles className="hero" params={particlesJSON} />
+        <Particles className={`hero ${this.props.class}`} params={particlesJSON} />
       </div>);
   }
 }

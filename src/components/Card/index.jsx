@@ -5,7 +5,7 @@ import './card.scss';
 class Card extends React.Component {
   render() {
     return (
-      <div className="col-lg-4 col-md-6 mb-3" title={this.props.altTitle}>
+      <div className={`mb-3 mr-3 pt-4 pb-4 ${this.props.last?'pr-5':''}`} title={this.props.altTitle}>
         <a href={this.props.link}>
           <div
             className={`card card-lift--hover-${

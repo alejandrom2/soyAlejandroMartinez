@@ -6,7 +6,7 @@ class Projects extends React.Component {
   render() {
     return (
       <section className="section pt-md">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row justify-content-center text-center mb-sm">
             <div className="col-lg-8">
               <div className="icon icon-shape bg-gradient-info rounded-circle text-white">
@@ -19,9 +19,9 @@ class Projects extends React.Component {
               </p>
             </div>
           </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-12">
-              <div className="row row-grid">
+          <div className="row cond-justify-center">
+            <div className="card-slider-holder">
+              <div className="card-slider">
                 <Card
                   title="Formula SAE Electric Software"
                   description="Developed a realtime data acquisition system connected to the web via 4G, for CSUN's first Formula SAE Electric Vehicle. Utilizing data visualization tools we deliver
@@ -75,6 +75,7 @@ class Projects extends React.Component {
                   badges={['Lumen', 'PHP', 'REST', 'MySQL']}
                   icon="server"
                   altTitle="CSUN Meta+Lab API's"
+                  last
                 />
               </div>
             </div>

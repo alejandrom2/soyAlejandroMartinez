@@ -20,7 +20,7 @@ class Hero extends React.Component {
             <Text>ALEJANDRO</Text>
             <Text>AND I <span id="highlight">DEVELOP</span></Text>
             <Text>SOFTWARE
-              <img src="./assets/sticker.png" className="sticker" alt="" />
+              <img src="./assets/sticker.png" draggable="false" className="sticker" alt="" />
             </Text>
           </div>
         </div>

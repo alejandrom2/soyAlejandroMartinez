@@ -1,6 +1,7 @@
 import React from "react";
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Fullscreen from "react-full-screen";
+import Draggable from 'react-draggable';
 import './termynal.scss';
 
 class Terminal extends React.Component {
@@ -8,218 +9,224 @@ class Terminal extends React.Component {
         super();
         this.state = {
           hidden:false,
-          isFull: false
+          isFull: false,
+          position: {
+            x: 0,
+            y: 0,
+          }
       };
     }
-    componentDidUpdate(){
-        const terminal = new Termynal('#termynal');// eslint-disable-line no-unused-vars, no-undef
-    }
     hide = () => {
-        this.setState({ hidden: !this.state.hidden})
+      this.setState({ hidden: !this.state.hidden, position: { x: 0, y: 0}})
     }
     goFull = () => {
-        this.setState({ isFull: !this.state.isFull });
+      this.setState({ isFull: !this.state.isFull, hidden: false, position: { x: 0, y: 0 } });
     }
     close = () => {
         window.open('404', '_blank');
     }
+    test = (e, data) =>{
+      this.setState({ position: {x:data.x ,y:data.y}});
+    }
+    finishedType = () => {
+    }
     render(){
-        function Term(props){
-      return (
-        <div
-          id="termynal"
-          className="inner-terminal"
-          style={{ display: props.hidden ? 'none' : 'block' }}
-          data-termynal
-          data-ty-typedelay="40"
-          data-ty-linedelay="700"
-        >
-          <div data-ty>
-            <b className="text-info">alejandromartinez.soy</b> on{' '}
-            <b className="text-primary">master</b> is 📦{' '}
-            <b className="text-danger">v1.1.0</b> via{' '}
-            <b className="text-success">⬢ v10.11.0</b>
-          </div>
-          <div data-ty="input">tree ./experience</div>
-          <div data-ty="progress">.</div>
-          <div data-ty data-ty-prompt="├── [Northridge / CA]">
-            <OutboundLink
-              className="text-danger font-weight-bold"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.matadormotorsports.racing"
+        function Contents(props) {
+          return (
+            <div
+              id="termynal"
+              className="inner-terminal"
+              style={{ display: props.hidden ? 'none' : 'block' }}
             >
-              CSUN Matador Motorsports EV FSAE
-            </OutboundLink>
-          </div>
-          <div data-ty data-ty-prompt="│ └── (August 2018 - Present)">
-            <b>Software Engineer</b>
-            <div className="job-desc">
-              <div className="tab">
-                Collaborated with Mechanical, Electrical, and Embedded
-                Software Engineer team leads to develop a two-way
-                telemetry system collecting data points from CSUN’s first
-                Formula One style electric vehicle.
+              <div data-ty>
+                <b className="text-info">alejandromartinez.soy</b> on{' '}
+                <b className="text-primary">master</b> is 📦{' '}
+                <b className="text-danger">v1.1.0</b> via{' '}
+                <b className="text-success">⬢ v10.11.0</b>
               </div>
-              <div className="tab">
-                Built a NodeJS web service handling over 80 data points
-                per second from the vehicle&apos;s Data Acquisition System
-                via web sockets and a time series Postgres database.
-              </div>
-              <div className="tab">
-                Architected Docker web server supporting Grafana, Node JS,
-                and Postgres while considering server load and latency
-                allowing our system to deliver data within 500 ms of being
-                sent from 4G connected vehicle.
-              </div>
-              <div className="tab">
-                Created 3D & 2D data visualizations utilizing Grafana to
-                offer engineering teams important data regarding their
-                subset of equipment on vehicle.
-              </div>
-              <div className="tab">
-                Designed user interface for onboard driver display
-                delivering key vehicle status information to driver
-                connecting directly to embedded hardware.
-              </div>
-            </div>
-          </div>
-          <div data-ty data-ty-prompt="├── [Palo Alto / CA]">
-            <OutboundLink
-              className="text-danger font-weight-bold"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.tesla.com/energy"
-            >
-              Tesla
-            </OutboundLink>
-          </div>
-          <div data-ty data-ty-prompt="│ └── (May - August 2018)">
-            <b>Software Engineer Intern</b>
-            <div className="job-desc">
-              <div className="tab">
-                Built scripts to optimize the deployment of multiple
-                applications through a universal pipeline, increasing ease
-                of new project development and deployment utilizing Docker
-                containers and Jenkins.
-              </div>
-              <div className="tab">
-                Restructured service tool utilized by the entire
-                engineering support team, maximizing ease of use of common
-                tools to predict and solve energy and vehicle product
-                issues, written in Python and React.
-              </div>
-              <div className="tab">
-                Launched an asynchronous python package that generates an
-                API utilizing SQLAlchemy database models, allowing team to
-                create microservices easily.
-              </div>
-              <div className="tab">
-                Participated in the development of internal systems using
-                object-oriented design and agile processes, scoping work
-                for future team projects.
-              </div>
-            </div>
-          </div>
-          <div data-ty data-ty-prompt="├── [Northridge / CA]">
-            <OutboundLink
-              className="text-danger font-weight-bold"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.metalab.csun.edu/"
-            >
-              META+LAB
-            </OutboundLink>
-          </div>
-          <div data-ty data-ty-prompt="│ └── (September 2015 – May 2018)">
-            <b>Back-end Web Developer / Scrum Master</b>
-            <div className="job-desc">
-              <div className="tab">
-                Led team scrum ceremonies and communicated with a project
-                manager and product owner ensuring a deliverable sprint
-                scope and expected product release.
-              </div>
-              <div className="tab">
-                Developed four applications using a PHP Framework to
-                handle user authentication, storage of faculty class data
-                and project details, and delivery of dynamic data to
-                front-end developers.
-              </div>
-              <div className="tab">
-                Created database schemas using MySQL in order to organize
-                data from multiple applications and built model logic
-                using Object-relational mapping.
-              </div>
-              <div className="tab">
-                Integrated 3rd party services including IBM Watson, and
-                full-text search engines to make usage of natural language
-                understanding to better organize user inputted data and
-                improve search speed and accuracy.
-              </div>
-              <div className="tab">
-                Developed and updated documentation to strengthen quality
-                and functionality of public-facing APIs.
-              </div>
-            </div>
-          </div>
-          <div data-ty data-ty-prompt="├── [San Fransisco / CA]">
-            <OutboundLink
-              className="text-danger font-weight-bold"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.macys.com"
-            >
-              Macy’s Technology
-            </OutboundLink>
-          </div>
-          <div data-ty data-ty-prompt="│ └── (May - August 2017)">
-            <b>Software Engineer Intern</b>
-            <div className="job-desc">
-              <div className="tab">
-                Implemented Lean methodology experiments to improve
-                visuals and functionality of the check-out shopping
-                experience in order to minimize cart abandonment.
-              </div>
-              <div className="tab">
-                Contributed functional code to projects using Java Spring,
-                Node.js, and Backbone.js.
-              </div>
-              <div className="tab">
-                Interacted with VPs, directors, and technology managers
-                consulting on our intern summer project, helping iterate
-                our application.
-              </div>
-              <div className="tab">
-                Led a team of 4 software engineering interns to create a
-                proposed software architecture and deliver a functional
-                minimum viable product web API and mobile iOS application.
-              </div>
+              <div data-ty="input">tree ./experience</div>
+              <div >
+                <div data-ty="progress">.</div>
+                <div data-ty data-ty-prompt="├── [Northridge / CA]">
+                  <OutboundLink
+                    className="text-danger font-weight-bold"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.matadormotorsports.racing"
+                  >
+                    CSUN Matador Motorsports EV FSAE
+                  </OutboundLink>
+                </div>
+                <div data-ty data-ty-prompt="│ └── (August 2018 - Present)">
+                  <b>Software Engineer</b>
+                  <div className="job-desc">
+                    <div className="tab">
+                      Collaborated with Mechanical, Electrical, and Embedded
+                      Software Engineer team leads to develop a two-way
+                      telemetry system collecting data points from CSUN’s first
+                      Formula One style electric vehicle.
+                    </div>
+                    <div className="tab">
+                      Built a NodeJS web service handling over 80 data points
+                      per second from the vehicle&apos;s Data Acquisition System
+                      via web sockets and a time series Postgres database.
+                    </div>
+                    <div className="tab">
+                      Architected Docker web server supporting Grafana, Node JS,
+                      and Postgres while considering server load and latency
+                      allowing our system to deliver data within 500 ms of being
+                      sent from 4G connected vehicle.
+                    </div>
+                    <div className="tab">
+                      Created 3D & 2D data visualizations utilizing Grafana to
+                      offer engineering teams important data regarding their
+                      subset of equipment on vehicle.
+                    </div>
+                    <div className="tab">
+                      Designed user interface for onboard driver display
+                      delivering key vehicle status information to driver
+                      connecting directly to embedded hardware.
+                    </div>
+                  </div>
+                </div>
+                <div data-ty data-ty-prompt="├── [Palo Alto / CA]">
+                  <OutboundLink
+                    className="text-danger font-weight-bold"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.tesla.com/energy"
+                  >
+                    Tesla
+                  </OutboundLink>
+                </div>
+                <div data-ty data-ty-prompt="│ └── (May - August 2018)">
+                  <b>Software Engineer Intern</b>
+                  <div className="job-desc">
+                    <div className="tab">
+                      Built scripts to optimize the deployment of multiple
+                      applications through a universal pipeline, increasing ease
+                      of new project development and deployment utilizing Docker
+                      containers and Jenkins.
+                    </div>
+                    <div className="tab">
+                      Restructured service tool utilized by the entire
+                      engineering support team, maximizing ease of use of common
+                      tools to predict and solve energy and vehicle product
+                      issues, written in Python and React.
+                    </div>
+                    <div className="tab">
+                      Launched an asynchronous python package that generates an
+                      API utilizing SQLAlchemy database models, allowing team to
+                      create microservices easily.
+                    </div>
+                    <div className="tab">
+                      Participated in the development of internal systems using
+                      object-oriented design and agile processes, scoping work
+                      for future team projects.
+                    </div>
+                  </div>
+                </div>
+                <div data-ty data-ty-prompt="├── [Northridge / CA]">
+                  <OutboundLink
+                    className="text-danger font-weight-bold"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.metalab.csun.edu/"
+                  >
+                    META+LAB
+                  </OutboundLink>
+                </div>
+                <div data-ty data-ty-prompt="│ └── (September 2015 – May 2018)">
+                  <b>Back-end Web Developer / Scrum Master</b>
+                  <div className="job-desc">
+                    <div className="tab">
+                      Led team scrum ceremonies and communicated with a project
+                      manager and product owner ensuring a deliverable sprint
+                      scope and expected product release.
+                    </div>
+                    <div className="tab">
+                      Developed four applications using a PHP Framework to
+                      handle user authentication, storage of faculty class data
+                      and project details, and delivery of dynamic data to
+                      front-end developers.
+                    </div>
+                    <div className="tab">
+                      Created database schemas using MySQL in order to organize
+                      data from multiple applications and built model logic
+                      using Object-relational mapping.
+                    </div>
+                    <div className="tab">
+                      Integrated 3rd party services including IBM Watson, and
+                      full-text search engines to make usage of natural language
+                      understanding to better organize user inputted data and
+                      improve search speed and accuracy.
+                    </div>
+                    <div className="tab">
+                      Developed and updated documentation to strengthen quality
+                      and functionality of public-facing APIs.
+                    </div>
+                  </div>
+                </div>
+                <div data-ty data-ty-prompt="├── [San Fransisco / CA]">
+                  <OutboundLink
+                    className="text-danger font-weight-bold"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.macys.com"
+                  >
+                    Macy’s Technology
+                  </OutboundLink>
+                </div>
+                <div data-ty data-ty-prompt="│ └── (May - August 2017)">
+                  <b>Software Engineer Intern</b>
+                  <div className="job-desc">
+                    <div className="tab">
+                      Implemented Lean methodology experiments to improve
+                      visuals and functionality of the check-out shopping
+                      experience in order to minimize cart abandonment.
+                    </div>
+                    <div className="tab">
+                      Contributed functional code to projects using Java Spring,
+                      Node.js, and Backbone.js.
+                    </div>
+                    <div className="tab">
+                      Interacted with VPs, directors, and technology managers
+                      consulting on our intern summer project, helping iterate
+                      our application.
+                    </div>
+                    <div className="tab">
+                      Led a team of 4 software engineering interns to create a
+                      proposed software architecture and deliver a functional
+                      minimum viable product web API and mobile iOS application.
+                    </div>
 
-              <div data-ty data-ty-prompt="└──">
-                .
+                    <div data-ty data-ty-prompt="└──">
+                      .
+                    </div>
+                  </div>
+                </div>
+                <div data-ty><span role="img" aria-label="Done">✨</span><span className="text-info">Done:</span> 4 work positions.</div>
               </div>
             </div>
-          </div>
-          <div data-ty>4 work positions.</div>
-        </div>
-      )
-        }
+          )
+        };
         return (
           <Fullscreen
             enabled={this.state.isFull}
             onChange={isFull => this.setState({isFull})}
           >
-            <div className="col-12 terminal bg-term shadow">
-              <div className="buttons">
-                <button className="btn btn-term term-close" onClick={this.close} />
-                <button className={`btn btn-term term-min ${this.state.isFull?'disabled':''}`} onClick={this.hide} disabled={this.state.isFull} />
-                <button className="btn btn-term term-max" onClick={this.goFull} />
+            <Draggable handle=".buttons" position={this.state.position} onStop={this.test}>
+              <div className="col-12 terminal bg-term shadow">
+                <div className="buttons">
+                  <button className="btn btn-term term-close" onClick={this.close} />
+                  <button className={`btn btn-term term-min ${this.state.isFull?'disabled':''}`} onClick={this.hide} disabled={this.state.isFull} />
+                  <button className="btn btn-term term-max" onClick={this.goFull} />
+                </div>
+                <Contents hidden={this.state.hidden} />
               </div>
-              <Term hidden={this.state.hidden} />
-            </div>
-          </Fullscreen>
-  );
-    }
+            </Draggable>
+          </Fullscreen>);
+  }
 }
 
 

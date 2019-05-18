@@ -2,6 +2,25 @@
     font-weight:bold;
     text-transform: uppercase;
 }
+#tophat{
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+#wave{
+  display: inline-block;
+  animation: rotation 2s infinite linear;
+
+  @keyframes rotation {
+    50% {
+      transform: rotate(90deg);
+    }
+    100% {
+      transform: rotate(-40deg);
+    }
+  }
+}
 .emoji{
     font-size:4rem;
     &-slant{

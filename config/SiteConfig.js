@@ -11,7 +11,7 @@ module.exports = {
   postDefaultCategoryID: "Tech", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
-  userName: "Advanced User", // Username to display in the author segment.
+  userName: "@alejandrom2", // Username to display in the author segment.
   userTwitter: "@alejandrom2", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "Los Angeles, CA", // User location to display in the author segment.
   userAvatar: "/assets/sticker.png", // User avatar to display in the author segment.

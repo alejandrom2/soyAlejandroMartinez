@@ -15,7 +15,7 @@ class Footer extends Component {
                 <div className="row align-items-center">
                   <div className="col-lg-10">
                     <h3 className="text-white">Found something that interest you?</h3>
-                    <p className="lead text-white mt-3">I would love to get in touch with you to talk about my background, share my expirences, or just grab coffee!</p>
+                    <p className="lead text-white mt-3">I would love to get in touch with you to talk about my background, share my experiences, or just grab coffee!</p>
                   </div>
                   <div className="col-lg-2 ml-lg-auto">
                     <span className="emoji text-center" role="img" aria-label="" >☕️</span>

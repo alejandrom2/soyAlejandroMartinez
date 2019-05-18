@@ -4,6 +4,7 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import "./Footer.scss";
 
 class Footer extends Component {
+  
   render() {
     return (
       <section className="section p-sm bg-gradient-success">

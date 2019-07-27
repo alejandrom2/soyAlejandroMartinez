@@ -1,4 +1,5 @@
 import React from "react";
+import { StaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Card from '../Card';
 
@@ -22,60 +23,39 @@ class Projects extends React.Component {
           <div className="row cond-justify-center">
             <div className="card-slider-holder">
               <div className="card-slider">
-                <Card
-                  title="Formula SAE Electric Software"
-                  description="Developed a realtime data acquisition system connected to the web via 4G, for CSUN's first Formula SAE Electric Vehicle. Utilizing data visualization tools we deliver
-                   important data to vehicle engineers in various teams."
-                  color="info"
-                  link="https://www.linkedin.com/pulse/connecting-race-vehicle-web-alejandro-martinez-/"
-                  badges={[
-                    'NodeJS',
-                    'PostgreSQL',
-                    '4G',
-                    'API',
-                    'Big Data',
-                    'Web Sockets',
-                  ]}
-                  icon="car-battery"
-                  altTitle="LinkedIn Article on our data acquisition system."
-                />
-                <Card
-                  title="Macys.com - Shopping Bag"
-                  description="Contributed to the Desktop and Mobile Shopping Bag application. Made changes to both front-end and back-end using Java Spring, Node.JS, and Handlebar.JS."
-                  color="danger"
-                  link="https://www.macys.com"
-                  badges={['Java', 'Spring', 'Lean', 'HandleBar.JS']}
-                  icon="shopping-bag"
-                  altTitle="Macys.com Webpage"
-                />
-                <Card
-                  title="CSUN Scholarship"
-                  description="A digital showcase of professional and service-related activities being completed by faculty members, engaging students and fellow colleagues in order to collaborate between work of common interest and expand on their interdisciplinary connections."
-                  color="danger"
-                  link="https://www.csun.edu/faculty/scholarship"
-                  badges={['IBM Watson', 'PHP', 'Laravel']}
-                  icon="user-graduate"
-                  altTitle="Scholarship Application built for CSUN"
-                />
-                <Card
-                  title="CSUN Faculty"
-                  description="A digital listing of all faculty members on campus, 
-                    allowing you to learn about their stories, degree, research interests, and current / past courses taught."
-                  color="danger"
-                  link="https://www.csun.edu/faculty"
-                  badges={['PHP', 'Laravel']}
-                  icon="chalkboard-teacher"
-                  altTitle="CSUN Faculty listing application."
-                />
-                <Card
-                  title="CSUN Web Services"
-                  description="A collection of web services developed to provide API access to many of the university's resources."
-                  color="success"
-                  link="https://api.metalab.csun.edu/"
-                  badges={['Lumen', 'PHP', 'REST', 'MySQL']}
-                  icon="server"
-                  altTitle="CSUN Meta+Lab API's"
-                  last
+                <StaticQuery
+                  query={graphql`
+                          query Projects {
+                            info: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/projects/"}}, sort: {fields: [frontmatter___order,frontmatter___title], order: DESC}) {
+                              nodes {
+                                frontmatter {
+                                  title
+                                  color
+                                  link
+                                  icon
+                                  altTitle
+                                  badges
+                                  order
+                                }
+                                rawMarkdownBody
+                              }
+                              totalCount
+                            }
+                          }`}
+                  render={data => 
+                    data.info.nodes.map((project, index) => (
+                      <Card
+                        title={project.frontmatter.title}
+                        description={project.rawMarkdownBody}
+                        color={project.frontmatter.color}
+                        link={project.frontmatter.link}
+                        badges={project.frontmatter.badges}
+                        icon={project.frontmatter.icon}
+                        altTitle={project.frontmatter.altTitle}
+                        last={index+1 === data.info.totalCount}
+                      />
+                    ))
+                  }
                 />
               </div>
             </div>

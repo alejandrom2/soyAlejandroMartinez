@@ -23,6 +23,13 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-sitemap",
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content/`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Alejandro Martinez',
@@ -48,6 +55,19 @@ module.exports = {
       resolve: "gatsby-plugin-nprogress",
       options: {
         color: config.themeColor
+      }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        commonmark: true,
+        footnotes: true,
+        pedantic: true,
+        gfm: true,
+        tableOfContents: {
+          heading: null,
+          maxDepth: 6,
+        },
       }
     },
     'gatsby-plugin-offline',

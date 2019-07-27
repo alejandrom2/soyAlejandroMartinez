@@ -55,6 +55,7 @@ class Terminal extends React.Component {
                               sort: {fields: frontmatter___end_date, order: DESC}
                             ) {
                               nodes {
+                                id
                                 frontmatter {
                                   company
                                   position
@@ -74,7 +75,7 @@ class Terminal extends React.Component {
                     <div>
                       {
                         data.info.nodes.map(info => (
-                          <div>
+                          <div key={info.id}>
                             <div data-ty data-ty-prompt={`├── [${info.frontmatter.city} / ${info.frontmatter.state}]`}>
                               <OutboundLink
                                 className="text-danger font-weight-bold"
@@ -88,7 +89,7 @@ class Terminal extends React.Component {
                             <div data-ty data-ty-prompt={`│ └── (${info.frontmatter.start_date} - ${info.frontmatter.end_date})`}>
                               <b>{info.frontmatter.position}</b>
                               <div className="job-desc">
-                                {info.rawMarkdownBody.split('\n').map(tab => (<div className="tab">{tab}</div>))}
+                                {info.rawMarkdownBody.split('\n').map(tab => (<div key={tab} className="tab">{tab}</div>))}
                               </div>
                             </div>
                           </div>))

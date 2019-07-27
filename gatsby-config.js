@@ -1,5 +1,5 @@
-const config = require("./config/SiteConfig");
-const urljoin = require("url-join");
+const config = require('./config/SiteConfig')
+const urljoin = require('url-join')
 
 module.exports = {
   siteMetadata: {
@@ -9,19 +9,17 @@ module.exports = {
       feed_url: urljoin(config.siteUrl, config.siteRss),
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${urljoin(
-        config.siteUrl,
-      )}/logos/logo-512.png`,
+      image_url: `${urljoin(config.siteUrl)}/logos/logo-512.png`,
       author: config.userName,
-      copyright: config.copyright
-    }
+      copyright: config.copyright,
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    "gatsby-plugin-sass",
-    "gatsby-plugin-lodash",
-    "gatsby-plugin-catch-links",
-    "gatsby-plugin-sitemap",
+    'gatsby-plugin-sass',
+    'gatsby-plugin-lodash',
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -47,15 +45,15 @@ module.exports = {
         trackingId: config.googleAnalyticsID,
         head: false,
         respectDNT: true,
-        exclude: ["/preview/**", "/do-not-track/me/too/"],
-        cookieDomain: "alejandromartinez.soy",
+        exclude: ['/preview/**', '/do-not-track/me/too/'],
+        cookieDomain: 'alejandromartinez.soy',
       },
     },
     {
-      resolve: "gatsby-plugin-nprogress",
+      resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: config.themeColor
-      }
+        color: config.themeColor,
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -68,9 +66,9 @@ module.exports = {
           heading: null,
           maxDepth: 6,
         },
-      }
+      },
     },
     'gatsby-plugin-offline',
-    "gatsby-plugin-netlify"
+    'gatsby-plugin-netlify',
   ],
 }

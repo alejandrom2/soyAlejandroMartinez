@@ -1,5 +1,4 @@
 import React from "react";
-import Helmet from "react-helmet";
 import Layout from "../components/layout";
 import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
@@ -12,7 +11,6 @@ class Index extends React.Component {
     return (
       <Layout location={this.props.location} title="Home">
         <div>
-          <Helmet />
           <Hero />
           <AboutMe />
           <Projects />

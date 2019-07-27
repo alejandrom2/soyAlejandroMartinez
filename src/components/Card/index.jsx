@@ -16,6 +16,7 @@ class Card extends React.Component {
               <div>
                 {this.props.badges.map(badge => (
                   <span
+                    key={badge}
                     className={`badge badge-pill badge-${this.props.color}`}
                   >
                     {badge}

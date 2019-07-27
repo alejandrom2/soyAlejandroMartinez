@@ -28,6 +28,7 @@ class Projects extends React.Component {
                           query Projects {
                             info: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/projects/"}}, sort: {fields: [frontmatter___order,frontmatter___title], order: DESC}) {
                               nodes {
+                                id
                                 frontmatter {
                                   title
                                   color
@@ -45,6 +46,7 @@ class Projects extends React.Component {
                   render={data => 
                     data.info.nodes.map((project, index) => (
                       <Card
+                        key={project.id}
                         title={project.frontmatter.title}
                         description={project.rawMarkdownBody}
                         color={project.frontmatter.color}

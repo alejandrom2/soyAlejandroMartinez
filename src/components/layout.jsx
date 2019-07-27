@@ -5,7 +5,6 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import "font-awesome/scss/font-awesome.scss";
 import 'argon-m2/assets/scss/argon.scss';
-import config from "../../config/SiteConfig";
 import SEO from "./SEO";
 import "./layout.scss";
 
@@ -17,10 +16,8 @@ export default class MainLayout extends React.Component {
     const { children } = this.props;
     return (
       <div>
-        <Helmet title={config.siteTitle}>
-          <SEO />
-          <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet" />
-        </Helmet>
+        <SEO />
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet" />
         {children}
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" />

@@ -18,7 +18,7 @@ class Footer extends Component {
                     <p className="lead text-white mt-3">I would love to get in touch with you to talk about my background, share my experiences, or just grab coffee!</p>
                   </div>
                   <div className="col-lg-2 ml-lg-auto">
-                    <span className="emoji text-center" role="img" aria-label="" >☕️</span>
+                    <span className="emoji text-center" role="img" aria-label="Coffee" >☕️</span>
                   </div>
                 </div>
               </div>
@@ -31,17 +31,17 @@ class Footer extends Component {
           </div>
           <div className="row justify-content-center text-center">
             <div className="col-lg-2 col-4 pt-sm">
-              <OutboundLink href="mailto:hi@alejandromartinez.soy" className="btn border-0 icon icon-shape bg-white rounded-circle">
+              <OutboundLink href="mailto:hi@alejandromartinez.soy" className="btn border-0 icon icon-shape bg-white rounded-circle" title="Email">
                 <FontAwesomeIcon className="text-dark" icon="envelope-open" />
               </OutboundLink>
             </div>
             <div className="col-lg-2 col-4 pt-sm">
-              <OutboundLink href="https://www.linkedin.com/in/alejandromartinezaem/" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-info rounded-circle">
+              <OutboundLink href="https://www.linkedin.com/in/alejandromartinezaem/" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-info rounded-circle" title="LinkedIn">
                 <FontAwesomeIcon className="text-white" icon={['fab', 'linkedin-in']} />
               </OutboundLink>
             </div>
             <div className="col-lg-2 col-4 pt-sm">
-              <OutboundLink href="https://github.com/alejandrom2/" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-dark rounded-circle">
+              <OutboundLink href="https://github.com/alejandrom2/" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-dark rounded-circle" title="Github">
                 <FontAwesomeIcon className="text-white" icon={['fab', 'github']} />
               </OutboundLink>
             </div>
@@ -51,7 +51,7 @@ class Footer extends Component {
               </OutboundLink>
             </div> */}
             <div className="col-lg-2 col-4 pt-sm">
-              <OutboundLink href="https://twitter.com/alejandrom2soy" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-info rounded-circle">
+              <OutboundLink href="https://twitter.com/alejandrom2soy" target="_blank" rel="noopener noreferrer" className="btn border-0 icon icon-shape bg-info rounded-circle" title="Twitter">
                 <FontAwesomeIcon className="text-primary" icon={['fab', 'twitter']} />
               </OutboundLink>
             </div>

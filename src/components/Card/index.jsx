@@ -5,7 +5,7 @@ import './card.scss';
 class Card extends React.Component {
   render() {
     return (
-      <div className={`mb-3 mr-3 pt-4 pb-4 ${this.props.last?'pr-5':''}`} title={this.props.altTitle}>
+      <div className={`project-cards mb-3 mr-3 pt-4 pb-4 ${this.props.last?'pr-5':''}`} title={this.props.altTitle}>
         <a href={this.props.link}>
           <div
             className={`card card-lift--hover-${
@@ -16,6 +16,7 @@ class Card extends React.Component {
               <div>
                 {this.props.badges.map(badge => (
                   <span
+                    key={badge}
                     className={`badge badge-pill badge-${this.props.color}`}
                   >
                     {badge}

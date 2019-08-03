@@ -60,6 +60,10 @@ a{
         // padding-bottom: 25px;
         padding-right: 15px;
         padding-left: 30px;
+        scroll-snap-type: x mandatory;
+        .project-cards{
+            scroll-snap-align: center;
+        }
     }
 }
 .cond-justify-center{

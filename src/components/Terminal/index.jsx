@@ -1,4 +1,5 @@
 import React from "react";
+import { StaticQuery, graphql } from "gatsby"
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Fullscreen from "react-full-screen";
 import Draggable from 'react-draggable';
@@ -14,7 +15,7 @@ class Terminal extends React.Component {
             x: 0,
             y: 0,
           }
-      };
+        };
     }
     hide = () => {
       this.setState({ hidden: !this.state.hidden, position: { x: 0, y: 0}})
@@ -45,167 +46,58 @@ class Terminal extends React.Component {
                 <b className="text-success">⬢ v10.11.0</b>
               </div>
               <div data-ty="input">tree ./experience</div>
-              <div >
+              <div>
                 <div data-ty="progress">.</div>
-                <div data-ty data-ty-prompt="├── [Northridge / CA]">
-                  <OutboundLink
-                    className="text-danger font-weight-bold"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.matadormotorsports.racing"
-                  >
-                    CSUN Matador Motorsports EV FSAE
-                  </OutboundLink>
-                </div>
-                <div data-ty data-ty-prompt="│ └── (August 2018 - Present)">
-                  <b>Software Engineer</b>
-                  <div className="job-desc">
-                    <div className="tab">
-                      Collaborated with Mechanical, Electrical, and Embedded
-                      Software Engineer team leads to develop a two-way
-                      telemetry system collecting data points from CSUN’s first
-                      Formula One style electric vehicle.
+                <StaticQuery
+                  query={graphql`
+                          query Experience {
+                            info: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/experience/"}},
+                              sort: {fields: frontmatter___end_date, order: DESC}
+                            ) {
+                              nodes {
+                                id
+                                frontmatter {
+                                  company
+                                  position
+                                  team
+                                  start_date(formatString: "MMMM YYYY")
+                                  end_date(formatString: "MMMM YYYY")
+                                  city
+                                  state
+                                }
+                                rawMarkdownBody
+                              }
+                              totalCount
+                            }
+                          }
+                        `}
+                  render={data => ( 
+                    <div>
+                      {
+                        data.info.nodes.map(info => (
+                          <div key={info.id}>
+                            <div data-ty data-ty-prompt={`├── [${info.frontmatter.city} / ${info.frontmatter.state}]`}>
+                              <OutboundLink
+                                className="text-danger font-weight-bold"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={info.frontmatter.link}
+                              >
+                                {info.frontmatter.company}
+                              </OutboundLink>
+                            </div>
+                            <div data-ty data-ty-prompt={`│ └── (${info.frontmatter.start_date} - ${info.frontmatter.end_date})`}>
+                              <b>{info.frontmatter.position}</b>
+                              <div className="job-desc">
+                                {info.rawMarkdownBody.split('\n').map(tab => (<div key={tab} className="tab">{tab}</div>))}
+                              </div>
+                            </div>
+                          </div>))
+                      }
+                      <div data-ty data-ty-prompt="└──"><span role="img" aria-label="Done">✨</span><span className="text-info">Done:</span> {data.info.totalCount} work positions.</div>
                     </div>
-                    <div className="tab">
-                      Built a NodeJS web service handling over 80 data points
-                      per second from the vehicle&apos;s Data Acquisition System
-                      via web sockets and a time series Postgres database.
-                    </div>
-                    <div className="tab">
-                      Architected Docker web server supporting Grafana, Node JS,
-                      and Postgres while considering server load and latency
-                      allowing our system to deliver data within 500 ms of being
-                      sent from 4G connected vehicle.
-                    </div>
-                    <div className="tab">
-                      Created 3D & 2D data visualizations utilizing Grafana to
-                      offer engineering teams important data regarding their
-                      subset of equipment on vehicle.
-                    </div>
-                    <div className="tab">
-                      Designed user interface for onboard driver display
-                      delivering key vehicle status information to driver
-                      connecting directly to embedded hardware.
-                    </div>
-                  </div>
-                </div>
-                <div data-ty data-ty-prompt="├── [Palo Alto / CA]">
-                  <OutboundLink
-                    className="text-danger font-weight-bold"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.tesla.com/energy"
-                  >
-                    Tesla
-                  </OutboundLink>
-                </div>
-                <div data-ty data-ty-prompt="│ └── (May - August 2018)">
-                  <b>Software Engineer Intern</b>
-                  <div className="job-desc">
-                    <div className="tab">
-                      Built scripts to optimize the deployment of multiple
-                      applications through a universal pipeline, increasing ease
-                      of new project development and deployment utilizing Docker
-                      containers and Jenkins.
-                    </div>
-                    <div className="tab">
-                      Restructured service tool utilized by the entire
-                      engineering support team, maximizing ease of use of common
-                      tools to predict and solve energy and vehicle product
-                      issues, written in Python and React.
-                    </div>
-                    <div className="tab">
-                      Launched an asynchronous python package that generates an
-                      API utilizing SQLAlchemy database models, allowing team to
-                      create microservices easily.
-                    </div>
-                    <div className="tab">
-                      Participated in the development of internal systems using
-                      object-oriented design and agile processes, scoping work
-                      for future team projects.
-                    </div>
-                  </div>
-                </div>
-                <div data-ty data-ty-prompt="├── [Northridge / CA]">
-                  <OutboundLink
-                    className="text-danger font-weight-bold"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.metalab.csun.edu/"
-                  >
-                    META+LAB
-                  </OutboundLink>
-                </div>
-                <div data-ty data-ty-prompt="│ └── (September 2015 – May 2018)">
-                  <b>Back-end Web Developer / Scrum Master</b>
-                  <div className="job-desc">
-                    <div className="tab">
-                      Led team scrum ceremonies and communicated with a project
-                      manager and product owner ensuring a deliverable sprint
-                      scope and expected product release.
-                    </div>
-                    <div className="tab">
-                      Developed four applications using a PHP Framework to
-                      handle user authentication, storage of faculty class data
-                      and project details, and delivery of dynamic data to
-                      front-end developers.
-                    </div>
-                    <div className="tab">
-                      Created database schemas using MySQL in order to organize
-                      data from multiple applications and built model logic
-                      using Object-relational mapping.
-                    </div>
-                    <div className="tab">
-                      Integrated 3rd party services including IBM Watson, and
-                      full-text search engines to make usage of natural language
-                      understanding to better organize user inputted data and
-                      improve search speed and accuracy.
-                    </div>
-                    <div className="tab">
-                      Developed and updated documentation to strengthen quality
-                      and functionality of public-facing APIs.
-                    </div>
-                  </div>
-                </div>
-                <div data-ty data-ty-prompt="├── [San Fransisco / CA]">
-                  <OutboundLink
-                    className="text-danger font-weight-bold"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.macys.com"
-                  >
-                    Macy’s Technology
-                  </OutboundLink>
-                </div>
-                <div data-ty data-ty-prompt="│ └── (May - August 2017)">
-                  <b>Software Engineer Intern</b>
-                  <div className="job-desc">
-                    <div className="tab">
-                      Implemented Lean methodology experiments to improve
-                      visuals and functionality of the check-out shopping
-                      experience in order to minimize cart abandonment.
-                    </div>
-                    <div className="tab">
-                      Contributed functional code to projects using Java Spring,
-                      Node.js, and Backbone.js.
-                    </div>
-                    <div className="tab">
-                      Interacted with VPs, directors, and technology managers
-                      consulting on our intern summer project, helping iterate
-                      our application.
-                    </div>
-                    <div className="tab">
-                      Led a team of 4 software engineering interns to create a
-                      proposed software architecture and deliver a functional
-                      minimum viable product web API and mobile iOS application.
-                    </div>
-
-                    <div data-ty data-ty-prompt="└──">
-                      .
-                    </div>
-                  </div>
-                </div>
-                <div data-ty><span role="img" aria-label="Done">✨</span><span className="text-info">Done:</span> 4 work positions.</div>
+                  )}
+                />
               </div>
             </div>
           )
@@ -218,9 +110,9 @@ class Terminal extends React.Component {
             <Draggable handle=".buttons" position={this.state.position} onStop={this.test}>
               <div className="col-12 terminal bg-term shadow">
                 <div className="buttons">
-                  <button className="btn btn-term term-close" onClick={this.close} />
-                  <button className={`btn btn-term term-min ${this.state.isFull?'disabled':''}`} onClick={this.hide} disabled={this.state.isFull} />
-                  <button className="btn btn-term term-max" onClick={this.goFull} />
+                  <button className="btn btn-term term-close" onClick={this.close} title="Close" />
+                  <button className={`btn btn-term term-min ${this.state.isFull ? 'disabled' : ''}`} onClick={this.hide} disabled={this.state.isFull} title="Minimize" />
+                  <button className="btn btn-term term-max" onClick={this.goFull} title="Maximize" />
                 </div>
                 <Contents hidden={this.state.hidden} />
               </div>
@@ -228,7 +120,6 @@ class Terminal extends React.Component {
           </Fullscreen>);
   }
 }
-
-
 Terminal.defaultProps = { hidden: false };
+
 export default Terminal;

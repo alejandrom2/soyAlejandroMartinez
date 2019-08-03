@@ -68,7 +68,7 @@ class SEO extends Component {
       );
     }
     return (
-      <Helmet>
+      <Helmet title={config.siteTitle}>
         {/* General tags */}
         <meta name="description" content={description} />
         <meta name="image" content={image} />

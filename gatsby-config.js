@@ -1,5 +1,5 @@
-const config = require("./config/SiteConfig");
-const urljoin = require("url-join");
+const config = require('./config/SiteConfig')
+const urljoin = require('url-join')
 
 module.exports = {
   siteMetadata: {
@@ -9,19 +9,74 @@ module.exports = {
       feed_url: urljoin(config.siteUrl, config.siteRss),
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${urljoin(
-        config.siteUrl,
-      )}/logos/logo-512.png`,
+      image_url: `${urljoin(config.siteUrl)}/logos/logo-512.png`,
       author: config.userName,
-      copyright: config.copyright
-    }
+      copyright: config.copyright,
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    "gatsby-plugin-sass",
-    "gatsby-plugin-lodash",
-    "gatsby-plugin-catch-links",
-    "gatsby-plugin-sitemap",
+    'gatsby-plugin-sass',
+    'gatsby-plugin-lodash',
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-sitemap',
+    {
+      resolve: `gatsby-plugin-json-output`,
+      options: {
+        feedMeta: {
+          name: "Alejandro Martinez",
+          title: "Full Stack Software Engineer",
+        },
+        siteUrl: `https://alejandromartinez.soy`,
+        graphQLQuery: `{
+          Projects: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/projects/"}}, sort: {fields: [frontmatter___order, frontmatter___title], order: DESC}) {
+            count: totalCount
+            data: nodes {
+              id
+              details: frontmatter {
+                title
+                color
+                link
+                icon
+                altTitle
+                badges
+                order
+              }
+              text: rawMarkdownBody
+            }
+          }
+          Experience: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/experience/"}}, sort: {fields: [frontmatter___order, frontmatter___title], order: DESC}) {
+            count: totalCount
+            data: nodes {
+              id
+              details: frontmatter {
+                title
+                company
+                position
+                team
+                start_date
+                end_date
+                city
+                state
+                color
+                link
+                altTitle
+              }
+              text: rawMarkdownBody
+            }
+          }
+        }
+        `,
+        serializeFeed: results => [{ Projects: results.data.Projects, Experience: results.data.Experience }]
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content/`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -40,17 +95,38 @@ module.exports = {
         trackingId: config.googleAnalyticsID,
         head: false,
         respectDNT: true,
-        exclude: ["/preview/**", "/do-not-track/me/too/"],
-        cookieDomain: "alejandromartinez.soy",
+        exclude: ['/preview/**', '/do-not-track/me/too/'],
+        cookieDomain: 'alejandromartinez.soy',
       },
     },
     {
-      resolve: "gatsby-plugin-nprogress",
+      resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: config.themeColor
+        color: config.themeColor,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        commonmark: true,
+        footnotes: true,
+        pedantic: true,
+        gfm: true,
+        tableOfContents: {
+          heading: null,
+          maxDepth: 6,
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.alejandromartinez.soy',
+        sitemap: 'https://www.alejandromartinez.soy/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    'gatsby-plugin-offline',
-    "gatsby-plugin-netlify"
+    'gatsby-plugin-netlify',
+    // 'gatsby-plugin-offline',
   ],
 }

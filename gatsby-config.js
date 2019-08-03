@@ -1,12 +1,3 @@
-const {
-  NODE_ENV,
-  URL: NETLIFY_SITE_URL = 'https://www.alejandromartinez.soy',
-  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-  CONTEXT: NETLIFY_ENV = NODE_ENV
-} = process.env;
-const isNetlifyProduction = NETLIFY_ENV === 'production';
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
-
 const config = require('./config/SiteConfig')
 const urljoin = require('url-join')
 
@@ -72,9 +63,7 @@ module.exports = {
           }
         }
         `,
-        serializeFeed: results => {
-          return { Projects: results.data.Projects, Experience:results.data.Experience}
-        },
+        serializeFeed: results => ({ Projects: results.data.Projects, Experience:results.data.Experience}),
         feedMeta: {
           name: "Alejandro Martinez",
           description: "",
@@ -134,22 +123,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        resolveEnv: () => NETLIFY_ENV,
-        env: {
-          production: {
-            policy: [{ userAgent: '*' }]
-          },
-          'branch-deploy': {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null
-          },
-          'deploy-preview': {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null
-          }
-        }
+        host: 'https://www.alejandromartinez.soy',
+        sitemap: 'https://www.alejandromartinez.soy/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     },
     // 'gatsby-plugin-offline',

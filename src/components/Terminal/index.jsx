@@ -110,9 +110,9 @@ class Terminal extends React.Component {
             <Draggable handle=".buttons" position={this.state.position} onStop={this.test}>
               <div className="col-12 terminal bg-term shadow">
                 <div className="buttons">
-                  <button className="btn btn-term term-close" onClick={this.close} />
-                  <button className={`btn btn-term term-min ${this.state.isFull?'disabled':''}`} onClick={this.hide} disabled={this.state.isFull} />
-                  <button className="btn btn-term term-max" onClick={this.goFull} />
+                  <button className="btn btn-term term-close" onClick={this.close} title="Close" />
+                  <button className={`btn btn-term term-min ${this.state.isFull ? 'disabled' : ''}`} onClick={this.hide} disabled={this.state.isFull} title="Minimize" />
+                  <button className="btn btn-term term-max" onClick={this.goFull} title="Maximize" />
                 </div>
                 <Contents hidden={this.state.hidden} />
               </div>

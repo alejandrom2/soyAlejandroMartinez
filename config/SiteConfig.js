@@ -5,7 +5,9 @@ module.exports = {
   siteLogo: '/assets/sticker.png', // Logo used for SEO and manifest.
   siteUrl: 'https://www.aleajndromartinez.soy', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: '', // Website description used for RSS feeds/meta description tag.
+  siteDescription: `I am a software engineer with over three years of experience developing web applications.
+  Active member of the latinx community advocating for diversity in the technology field, by working with college and high school students to improve k- 12 to college pipeline.
+  Passionate leader with over five years of experience managing teams and organizations, as well as holding the ability to communicate with key corporate executives.', // Website description used for RSS feeds/meta description tag.`,
   siteRss: '/rss.xml', // Path to the RSS file.
   googleAnalyticsID: 'UA-128156786-1', // GA tracking ID.
   postDefaultCategoryID: 'Tech', // Default category for posts.

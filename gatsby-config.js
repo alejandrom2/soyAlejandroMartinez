@@ -1,3 +1,12 @@
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://www.alejandromartinez.soy',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
 const config = require('./config/SiteConfig')
 const urljoin = require('url-join')
 
@@ -20,6 +29,60 @@ module.exports = {
     'gatsby-plugin-lodash',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',
+    {
+      resolve: `gatsby-plugin-json-output`,
+      options: {
+        siteUrl: `https://alejandromartinez.soy`,
+        graphQLQuery: `{
+          Projects: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/projects/"}}, sort: {fields: [frontmatter___order, frontmatter___title], order: DESC}) {
+            count: totalCount
+            data: nodes {
+              id
+              details: frontmatter {
+                title
+                color
+                link
+                icon
+                altTitle
+                badges
+                order
+              }
+              text: rawMarkdownBody
+            }
+          }
+          Experience: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/experience/"}}, sort: {fields: [frontmatter___order, frontmatter___title], order: DESC}) {
+            count: totalCount
+            data: nodes {
+              id
+              details: frontmatter {
+                title
+                company
+                position
+                team
+                start_date
+                end_date
+                city
+                state
+                color
+                link
+                altTitle
+              }
+              text: rawMarkdownBody
+            }
+          }
+        }
+        `,
+        serializeFeed: results => {
+          return { Projects: results.data.Projects, Experience:results.data.Experience}
+        },
+        feedMeta: {
+          name: "Alejandro Martinez",
+          description: "",
+          title: "Full Stack Software Engineer",
+        },
+        nodesPerFeedFile: 100,
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -68,7 +131,28 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }]
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          }
+        }
+      }
+    },
+    // 'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
   ],
 }

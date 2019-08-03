@@ -23,6 +23,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-json-output`,
       options: {
+        feedMeta: {
+          name: "Alejandro Martinez",
+          title: "Full Stack Software Engineer",
+        },
         siteUrl: `https://alejandromartinez.soy`,
         graphQLQuery: `{
           Projects: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/projects/"}}, sort: {fields: [frontmatter___order, frontmatter___title], order: DESC}) {
@@ -63,13 +67,7 @@ module.exports = {
           }
         }
         `,
-        serializeFeed: results => ({ Projects: results.data.Projects, Experience:results.data.Experience}),
-        feedMeta: {
-          name: "Alejandro Martinez",
-          description: "",
-          title: "Full Stack Software Engineer",
-        },
-        nodesPerFeedFile: 100,
+        serializeFeed: results => [{ Projects: results.data.Projects, Experience: results.data.Experience }]
       }
     },
     {
@@ -128,7 +126,7 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    // 'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
+    // 'gatsby-plugin-offline',
   ],
 }

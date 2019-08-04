@@ -21,13 +21,12 @@ collections:
       - {label: "Order", name: "rating", widget: "number"}
       - {label: "Badges", name: "badges", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - name: "projects"
-  - label: "Experience"
+  - name: "experience"
+    label: "Experience"
     folder: "src/content/experience"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - name: "experience"
       - {label: "Layout", name: "layout", widget: "hidden", default: "experience"}
       - {label: "Company", name: "company", widget: "string"}
       - {label: "Position", name: "position", widget: "string"}

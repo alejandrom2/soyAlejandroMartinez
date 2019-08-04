@@ -27,6 +27,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - name: "experience"
       - {label: "Layout", name: "layout", widget: "hidden", default: "experience"}
       - {label: "Company", name: "company", widget: "string"}
       - {label: "Position", name: "position", widget: "string"}

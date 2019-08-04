@@ -1,14 +1,15 @@
 ---
-title: "Macys.com - Shopping Bag"
-color: "danger"
-link: "https://www.macys.com"
-badges: 
-- 'Java'
-- 'Spring'
-- 'Lean'
-- 'HandleBar.JS'
-icon: "shopping-bag"
-altTitle: "Macys.com Webpage"
-order: 0
+title: Macys.com - Shopping Bag
+altTitle: Macys.com Webpage
+date: 2019-08-04T19:55:44.488Z
+icon: shopping-bag
+link: 'https://www.macys.com'
+color: danger
+rating: 2
+badges:
+  - Java
+  - Spring
+  - Lean
+  - HandleBar.JS
 ---
 Contributed to the Desktop and Mobile Shopping Bag application. Made changes to both front-end and back-end using Java Spring, Node.JS, and Handlebar.JS.

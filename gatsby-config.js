@@ -20,6 +20,7 @@ module.exports = {
     'gatsby-plugin-lodash',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-netlify-cms',
     {
       resolve: `gatsby-plugin-json-output`,
       options: {

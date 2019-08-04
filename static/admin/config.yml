@@ -21,3 +21,19 @@ collections:
       - {label: "Order", name: "rating", widget: "number"}
       - {label: "Badges", name: "badges", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - name: "projects"
+  - label: "Experience"
+    folder: "src/content/experience"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "expirence"}
+      - {label: "Company", name: "company", widget: "string"}
+      - {label: "Position", name: "position", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Start Date", name: "start_date", widget: "datetime"}
+      - {label: "End Date", name: "end_date", widget: "datetime"}
+      - {label: "City", name: "city", widget: "string"}
+      - {label: "State", name: "state", widget: "string"}
+      - {label: "Location", name: "location", widget: "map"}
+      - {label: "Body", name: "body", widget: "markdown"}

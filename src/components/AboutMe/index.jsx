@@ -56,7 +56,7 @@ class AboutMe extends React.Component {
                 </div>
                 <div className="pl-4">
                   <h2 className="display-3 text-white" id="name">Who am I?</h2>
-                  <p className="text-white">I am a software engineer with over three years of experience developing web applications.<br />
+                  <p className="text-white">I am a software engineer with four three years of experience developing web applications.<br />
                     Active member of the latinx community advocating for diversity in the technology field, by working with college and high school students to improve k-12 to college pipeline.<br />
                     Passionate leader with over five years of experience managing teams and organizations, as well as holding the ability to communicate with key corporate executives.
                   </p>

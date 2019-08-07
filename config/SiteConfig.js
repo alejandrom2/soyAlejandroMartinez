@@ -3,7 +3,7 @@ module.exports = {
   siteTitleShort: 'Alejandro M2', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: 'Student | Developer | Latinx', // Alternative site title for SEO.
   siteLogo: '/assets/sticker.png', // Logo used for SEO and manifest.
-  siteUrl: 'https://www.aleajndromartinez.soy', // Domain of your website without pathPrefix.
+  siteUrl: 'https://www.alejandromartinez.soy', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: `I am a software engineer with over four years of experience developing web applications.
   Active member of the latinx community advocating for diversity in the technology field, by working with college and high school students to improve k- 12 to college pipeline.

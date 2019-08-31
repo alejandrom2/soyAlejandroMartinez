@@ -26,7 +26,7 @@ class Projects extends React.Component {
                 <StaticQuery
                   query={graphql`
                           query Projects {
-                            info: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/projects/"}}, sort: {fields: [frontmatter___order,frontmatter___title], order: DESC}) {
+                            info: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/projects/"}}, sort: {fields: [frontmatter___order], order: ASC}) {
                               nodes {
                                 id
                                 frontmatter {

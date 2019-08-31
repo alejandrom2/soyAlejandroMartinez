@@ -3,10 +3,9 @@ title: Formula SAE Electric Software
 altTitle: LinkedIn Article on our data acquisition system.
 date: 2019-08-04T19:55:24.365Z
 icon: car-battery
-link: >-
-  https://www.linkedin.com/pulse/connecting-race-vehicle-web-alejandro-martinez-/
+link: 'https://www.linkedin.com/pulse/connecting-race-vehicle-web-alejandro-martinez-/'
 color: info
-rating: 0
+order: 0
 badges:
   - NodeJS
   - PostgreSQL

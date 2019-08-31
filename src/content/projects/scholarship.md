@@ -5,7 +5,7 @@ date: 2019-08-04T19:55:59.719Z
 icon: user-graduate
 link: 'https://www.csun.edu/faculty/scholarship'
 color: danger
-rating: 4
+order: 4
 badges:
   - IBM Watson
   - PHP

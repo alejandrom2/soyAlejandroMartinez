@@ -5,7 +5,7 @@ date: 2019-08-04T19:55:44.488Z
 icon: shopping-bag
 link: 'https://www.macys.com'
 color: danger
-rating: 2
+order: 3
 badges:
   - Java
   - Spring

@@ -22,7 +22,7 @@ a{
     $gradientColor: linear-gradient(87deg, $rgbaColor 0, adjust-hue($rgbaColor, 25%) 100%);
         .card-lift--hover-#{$color} {
             height: 310px;
-            width: 500px;
+            width: 300px;
         .description{
             overflow:auto;
         }
